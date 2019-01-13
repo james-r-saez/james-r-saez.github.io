@@ -1,0 +1,84 @@
+:root {
+  --grid-unit-size: 70vw;
+  --grid-border-radius: 1em;
+}
+
+body {
+  background-image: url(https://img.freepik.com/free-photo/smooth-stucco-wall_1194-7087.jpg?size=338&ext=jpg);
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.grid-container {
+  padding: 2em;
+  text-align: center;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 4fr 4fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "project1 project2"
+  "project3 project4";
+}
+
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    padding: 1em;
+    text-align: center;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    --grid-unit-size: 90vw;
+    grid-template-areas:
+    "project1"
+    "project2"
+    "project3"
+    "project4";
+  }
+}
+
+.project1 {
+  grid-area: project1;
+  background-color: #ff6666;
+  max-width: var(--grid-unit-size);
+  border-radius: var(--grid-border-radius);
+}
+
+.project2 {
+  grid-area: project2;
+  background-color: #4d79ff;
+  max-width: var(--grid-unit-size);
+  border-radius: var(--grid-border-radius);
+}
+
+.project3 {
+  background-color: #33ff33;
+  grid-area: project3;
+  max-width: var(--grid-unit-size);
+  border-radius: var(--grid-border-radius);
+}
+
+.project4 {
+  grid-area: project4;
+  background-color: #ffff66;
+  max-width: var(--grid-unit-size);
+  border-radius: var(--grid-border-radius);
+}
+
+img {
+  max-width: 40vw;
+  margin-bottom: 1em;
+}
+
+a {
+  font-size: 1.3em;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+.aboutme {
+  margin-left: 5em;
+  margin-right: 5em;
+  font-size: 1.6em;
+}
